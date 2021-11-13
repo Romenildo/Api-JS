@@ -35,16 +35,16 @@ app.delete('/usuarios/:id', (req, res)=>{
     res.send(usuario)
 })
 
-app.put('/usuario/:id', (req, res)=>{
-    const usuario = dataBase.editUser({
+//editar usuario
+//edit user
+app.put('/usuarios/:id', (req, res)=>{
+    const usuario = dataBase.addUser({
         id: req.params.id,
         nome: req.body.nome,
         senha: req.body.senha
     })
-    return usuario
+    res.send(usuario)
 })
-
-
 
 
 app.listen(porta,()=>{
