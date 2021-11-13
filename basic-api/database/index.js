@@ -2,23 +2,22 @@
 //commands for management the database
 const sequence = {
     _id: 1,
-    get _id (){return this._id++}
+    get id(){return this._id++}
 }
-
 
 const usuarios = {}
 
 const addUser = (usuario) =>{
+    //fazer condicao para nao adicionar ja existentes
     if(!usuario.id){
-        usuario.id = sequence
+        usuario.id = sequence.id
     }
     usuarios[usuario.id] = usuario
-
     return usuario
 }
 
 const listAllUser = () =>{
-        return Object.values(usuarios) || {}
+    return Object.values(usuarios)
 }
 
 const searchUserbyID = (id) => {

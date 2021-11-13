@@ -19,7 +19,7 @@ app.post('/usuarios',(req, res)=>{
 //listar todos os usuarios
 //list all users
 app.get('/usuarios',(req, res)=>{
-    res.send(dataBase.listAllUser)
+    res.send(dataBase.listAllUser())
 })
 
 //procurar usuario por id
