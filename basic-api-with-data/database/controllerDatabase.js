@@ -3,8 +3,7 @@ const sentence = {
     get id(){return this._id++}
 }
 
-const products = require('./database.json')
-
+const products = require('./database.json',err=>{})
 
 
 const checkNames = Object.values(products).map(e=>e.name)
@@ -34,3 +33,5 @@ const deleteItem = (id)=>{
     delete products[id]
     return item
 }
+
+module.exports = {addItem, getItem, getItens, deleteItem}
