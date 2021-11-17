@@ -1,6 +1,7 @@
 //Adicionar usuarios
 const dataBase = require("../db")
-const router = require("express")
+const express = require("express")
+const router = express.Router()
 
 //Add new Users
 router.post('/usuarios',(req, res)=>{
