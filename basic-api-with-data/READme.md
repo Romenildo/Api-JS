@@ -1,1 +1,0 @@
-Api lendo e escrevendo os dados a partir de um arquivo
